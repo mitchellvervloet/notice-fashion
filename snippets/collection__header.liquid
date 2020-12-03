@@ -1,0 +1,32 @@
+<header role="banner">
+
+  {% if collection.image and section.settings.show_collection_image %}
+  <div class="mb3 lg--up--mb4 md--up--four-fifths mx--auto">
+    {% assign image = collection.image  %}
+    {% include 'responsive-image' with
+      image: image,
+      max_width: 2000,
+      max_height: 2000
+    %}
+  </div>
+  {% endif %}
+
+  <div class="lg--up--flex">
+    <div class="lg--up--one-half lg--up--self--end">
+      <h1 class="f--heading  font-size--xxl line-height-6 wd--font-size--xxxl m0 pb1">
+        <span class="">{{ collection.title }}</span>
+      </h1>
+      {% if collection.description != blank %}
+        <div class="m0 f--main {{ global__basic_font_size }} three-quarters">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+    </div>
+    {% if sorting_enabled %}
+    <div class="mt3 lg--up--mt0 lg--up--one-half lg--up--flex lg--up--text-align--right">
+      {% include 'collection-sorting' %}
+    </div>
+    {% endif %}
+  </div>
+
+</header>

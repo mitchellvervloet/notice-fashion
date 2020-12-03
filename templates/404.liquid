@@ -1,0 +1,19 @@
+{%- assign section_color = 'primary' -%}
+{%- include 'global-variables' -%}
+
+<section class="featured-collection {{ global__section_with_padding_class }} color--{{ section_color }}-text bg--{{ section_color }}-background" data-mobile-flickity="true">
+  <div class="max-site-width px2 lg--up--px3 text-align--center">
+   
+    <h1>WTF where is my page?!</h1>
+    <p>We don't know either, sorry. It looks like you're lost...</p>
+    <h3> <a href="https://www.notice-fashion.com">Click here to get me home :(</a></h3>
+    
+    {% comment %}
+    <h1>{{ 'general.404.title' | t }}</h1>
+    <p>{{ 'general.404.subtext_html' | t: link_url: routes.all_products_collection_url }}</p>
+    {% endcomment %}
+    
+  </div>
+</section>
+
+

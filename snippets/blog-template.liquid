@@ -1,0 +1,58 @@
+<section class="blog {{ global__section_with_padding_class }} color--{{ section_color }}-text bg--{{ section_color }}-background" data-section-type="blog" data-section-id="{{ section.id }}"  data-fade-in="{{ fade_in }}">
+  <div class="max-site-width px2 lg--up--px3">
+
+    {% paginate blog.articles by section.settings.no_posts %}
+
+      {% include 'blog__header' %}
+
+      <div class="grid mt3 lg--up--mt4">
+
+        {% if tags_enabled %}
+        <div class="grid__item lg--up--one-seventh lg--up--sticky top--0 {{ global__basic_font_size }} md--dn--hide">
+          <a class="color--{{ section_color }}-text lg--up--hide p1 inline-block mxn1 mb1 pointer" data-tag-filter-mobile-trigger>
+            <div class="inline-block">
+            {{ 'collections.general.filter' | t }}
+            <span class="font-size--xxxxs inline-block align--middle">
+              <span class="chevron-down">{% include 'svg' | icon: 'icon-chevron-down' %}</span>
+              <span class="chevron-up hide">{% include 'svg' | icon: 'icon-chevron-up' %}</span>
+            </span>
+            </div>
+          </a>
+          <ul class="list--reset m0 mtn1 pb3 pt2 lg--up--pb0 lg--up--pt3{{ global__basic_font_size }}">
+            <li class="mb1">
+              <a class="color--{{ section_color }}-text hv--border-bottom--{{ section_color }}-text inline-block" href="{{ blog.url }}"><span {% unless current_tags %} class="border-bottom--{{ section_color }}-text"{% endunless %}>All</span></a>
+            </li>
+            {% for tag in blog.all_tags %}
+              {% if current_tags contains tag %}
+              <li class="mb1">
+                  <a class="color--{{ section_color }}-text hv--border-bottom--{{ section_color }}-text inline-block" href="{{ blog.url }}/tagged/{{ tag | handle }}"><span class="border-bottom--main">{{ tag }}</span></a>
+              </li>
+              {% else %}
+              <li class="mb1">
+                  <a class="color--{{ section_color }}-text hv--border-bottom--{{ section_color }}-text inline-block" href="{{ blog.url }}/tagged/{{ tag | handle }}"><span>{{ tag }}</span></a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="grid__item pt1 {% if section.settings.enable_tag_filter %}lg--up--six-sevenths{% endif %}">
+
+          {% if layout == 'grid' %}
+            {% include 'blog__grid' %}
+          {% else %}
+            {% include 'blog__list' %}
+          {% endif %}
+
+          {% if paginate.pages > 1 %}
+            {% include 'pagination' %}
+          {% endif %}
+
+        </div>
+      </div>
+
+    {% endpaginate %}
+
+  </div>
+</section>

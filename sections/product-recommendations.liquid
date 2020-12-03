@@ -1,0 +1,68 @@
+{%- assign section_color = section.settings.color_scheme -%}
+{%- include 'global-variables' -%}
+
+{%- if section.settings.show_product_recommendations -%}
+<div class="product-recommendations" data-section-type="product-recommendations" data-section-id="{{ section.id }}-product-recommendations" data-product-id="{{ product.id }}" data-limit="3">
+  {% if recommendations.products_count > 0 %}
+  <div class="{{ global__section_with_padding_class }} color--{{ section_color }}-text bg--{{ section_color }}-background">
+    <div class="max-site-width lg--up--px3">
+      <div class="lg--up--grid">
+        <div class="lg--up--grid__item lg--up--one-quarter">
+          <div class="featured-collection__info pb3 pl2 pr4 lg--up--px0">
+            <h2 class="{{ global__heading_font_size }}">{{ section.settings.product_recommendations_heading }}</h2>
+          </div>
+        </div>
+        <div class="lg--up--grid__item lg--up--three-quarters">
+          <div class="mobile-flickity relative">
+            <div class="mobile-flickity__slides pb3 lg--up--grid grid--uniform lg--up--mtn3">
+              {%- for product in recommendations.products -%}
+              <div class="product-grid-item nine-twelfths md--six-twelfths lg--up--grid__item lg--up--one-third lg--up--mt3">
+                <div class="px2 lg--up--px0">{% include 'product-grid-item' %}</div>
+              </div>
+              {%- endfor -%}
+            </div>
+            <div class="lg--up--hide">
+              <div class="spacer pt1"></div>
+              <div class='mobile-flickity__button-container absolute bottom--0 right--0 pt1 pr2'>
+                <button class="btn border--none bg--transparent btn--next color--{{ section_color }}-text hv--{{ section_color }}-accent font-size--sm">{% include 'icon-next' %}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_product_recommendations",
+      "label": "Show dynamic recommendations",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+         { "value": "primary", "label": "Primary"},
+         { "value": "secondary ", "label": "Secondary"},
+         { "value": "tertiary", "label": "Tertiary"}
+      ]
+    }
+  ]
+}
+{% endschema %}
