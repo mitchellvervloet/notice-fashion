@@ -41,8 +41,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% endif %}
 
   {% include 'social-meta-tags' %}
-
+  
   {{ content_for_header }}
+
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
 
   <script>
