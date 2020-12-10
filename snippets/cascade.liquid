@@ -322,7 +322,7 @@
                 Rich Text
               ============================================================================== *
               {% endcomment %}
-              {% if block.type == 'rich_text' or block.type == 'heading' or block.type == 'text' %}
+              {% if block.type == 'rich_text' or block.type == 'text' %}
               <div class="rich-text rich-text--{{ block.id }} {{ block.settings.text_align}}">
                 <div class="seven-eighths mx--auto pm--three-quarters wd--two-thirds">
                   {% if block.settings.heading != blank   %}
@@ -341,6 +341,40 @@
                     <h2 class=" m0 {{ heading_class }}">
                       {{ block.settings.heading }}
                     </h2>
+                  {% endif %}
+                  {% if block.settings.rich_text != blank  %}
+                  <div class="richtext {{ font_size }} {% if block.settings.heading != blank %}mt2{% endif %}">
+                    {{ block.settings.rich_text }}
+                  </div>
+                  {% endif %}
+                  {% if block.settings.cta_url != blank %}
+                  <a class="inline-block {{ global__homepage_more_link }} {{ font_size }}  {{ global__link_underline }} {{ global__hover_underline }}" href="{{ block.settings.cta_url }}" >
+                    {{ block.settings.cta_text }}
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+              {% endif %}
+              {% if block.type == 'heading' %}
+              {% assign heading_tag = block.settings.heading_tag %}
+              <div class="rich-text rich-text--{{ block.id }} {{ block.settings.text_align}}">
+                <div class="seven-eighths mx--auto pm--three-quarters wd--two-thirds">
+                  {% if block.settings.heading != blank   %}
+                    {% if block_width_mobile == 'full' %}
+                      {% assign heading_class = heading_fontsize__mobile_full %}
+                    {% else %}
+                      {% assign heading_class = heading_fontsize__mobile_half %}
+                    {% endif %}
+                    {% if block.type == 'heading' and block.settings.font_size == 'large' %}
+                      {% if block_width_mobile == 'full' %}
+                        {% assign heading_class = 'f--heading font-size--xxxl line-height--8 pm--font-size--xxxxxl pm--line-height--11 wd--font-size--xxxxxxl wd--line-height--13' %}
+                      {% else %}
+                        {% assign heading_class = 'f--heading font-size--xxl line-height--7 pm--font-size--xxxxl pm--line-height--11 wd--font-size--xxxxxxl wd--line-height--13' %}
+                      {% endif %}
+                    {% endif %}
+                    <{{heading_tag}} class=" m0 {{ heading_class }}">
+                      {{ block.settings.heading }}
+                    </{{heading_tag}}>
                   {% endif %}
                   {% if block.settings.rich_text != blank  %}
                   <div class="richtext {{ font_size }} {% if block.settings.heading != blank %}mt2{% endif %}">
