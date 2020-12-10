@@ -8,9 +8,9 @@
       <div class="grid__item lg--up--one-quarter">
         <div class="pb1 pl2 pr4 lg--up--p0">
           {% if section.settings.title == blank %}
-            <h2 class="{{ global__heading_font_size }} m0">{{ 'homepage.onboarding.newsletter_title' | t }}</h2>
+            <span class="{{ global__heading_font_size }} m0">{{ 'homepage.onboarding.newsletter_title' | t }}</span>
           {% else %}
-            <h2 class="{{ global__heading_font_size }} m0">{{ section.settings.title }}</h2>
+            <span class="{{ global__heading_font_size }} m0">{{ section.settings.title }}</span>
           {% endif %}
         </div>
       </div>
