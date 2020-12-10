@@ -101,7 +101,7 @@
 
           <div class="hide" data-key="{{ child_list_handle }}--{{ forloop.index }}" data-mobile-second-level-section>
 
-            <h4 class=" t--header-navigation mt1 mb3">
+            <div class=" t--header-navigation mt1 mb3">
               {% if link_all %}
               <a href="{{ link.url }}" class="color--active-text hv--active-accent">
               {% endif %}
@@ -109,7 +109,7 @@
               {% if link_all %}
               </a>
               {% endif %}
-            </h4>
+            </div>
 
             {% if mega_nav %}
 
@@ -125,7 +125,7 @@
                   {% assign last_list = false %}
                 {% endif %}
 
-                <h4 class=" t--header-navigation mt1 mb1 inline-block">
+                <div class=" t--header-navigation mt1 mb1 inline-block">
                   {% if link_all %}
                   <a href="{{ childlink.url }}" class="color--active-text hv--active-accent">
                   {% endif %}
@@ -133,7 +133,7 @@
                   {% if link_all %}
                   </a>
                   {% endif %}
-                </h4>
+                </div>
 
                 <ul class="mobile-navigation__second-level f--heading list--reset m0 font-size--xxl mxn1 mb2">
                   {% for childchildlink in childlink.links %}

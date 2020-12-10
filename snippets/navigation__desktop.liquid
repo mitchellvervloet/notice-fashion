@@ -39,7 +39,7 @@
               {% assign last_list = false %}
             {% endif %}
             <div class="px3">
-              <h4 class=" t--header-navigation mt1 mb1 inline-block">
+              <div class=" t--header-navigation mt1 mb1 inline-block">
                 {% if link_all %}
                 <a href="{{ childlink.url }}" class="color--active-text hv--active-accent">
                 {% endif %}
@@ -47,7 +47,7 @@
                 {% if link_all %}
                 </a>
                 {% endif %}
-              </h4>
+              </div>
               <ul class="navigation__second-level f--heading list--reset m0 font-size--xxl mxn1 mb2">
                 {% for childchildlink in childlink.links %}
                 <li class="nav__item{% if childchildlink.active %} nav__item--active{% endif %}">
@@ -66,7 +66,7 @@
 
       {% else %}
       <div class="inline-block">
-        <h4 class=" t--header-navigation mt1 mb2">
+        <div class=" t--header-navigation mt1 mb2">
           {% if link_all %}
           <a href="{{ link.url }}" class="color--active-text hv--active-accent">
           {% endif %}
@@ -74,7 +74,7 @@
           {% if link_all %}
           </a>
           {% endif %}
-        </h4>
+        </div>
         <ul class="navigation__second-level f--heading list--reset m0 font-size--xxl mxn1">
           {% for childlink in menus[child_list_handle].links %}
             {% if childlink.links != blank %}
