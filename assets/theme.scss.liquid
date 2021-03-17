@@ -4139,7 +4139,7 @@ $pswp__include-minimal-style: true !default;
 Responsive Images
 ========================================================================== */
 
- 
+
 .responsive-image__wrapper {
   position: relative;
   overflow: hidden;
@@ -4241,7 +4241,7 @@ Mobile Flickity
 
 Sections
 ========================================================================== */
-//stylelint-disable 
+//stylelint-disable
 body:not(.banner-image) {
   .shopify-section:first-child section.bg--primary-background {
     padding-top: $space-2;
@@ -5572,13 +5572,13 @@ Header
 
 #BannerDesktopWrapper:after {
   content: '';
-  display: none; 
+  display: none;
 }
 
 @include media-query($large-up) {
   #BannerDesktopWrapper:after {
     content: 'watch';
-    display: none; 
+    display: none;
   }
 }
 
@@ -6044,7 +6044,7 @@ Slideshow
 }
 
 @include media-query($small) {
-  .social-widget .sw-instagram .sw-instagram-header-title { 
+  .social-widget .sw-instagram .sw-instagram-header-title {
     font-size: 2.25rem;
     line-height: 2.5rem;
     padding: 0 0 2rem 1.25rem;
@@ -6086,7 +6086,7 @@ Slideshow
   .product-description__form {
   	padding-right: 0;
   }
-  
+
   .product-description__description {
   	padding-right: 0;
   }
@@ -6153,7 +6153,7 @@ Slideshow
 
 .item.item--image-with-text-custom.item--desktop--full {
 	padding-bottom: 60px;
-  
+
   	@media screen and (min-width: 990px) {
         padding-bottom: 80px;
     }
@@ -6184,38 +6184,38 @@ Slideshow
     justify-content: center;
     text-align: center;
     position: relative;
-    
+
     > div {
     	position: relative;
       	bottom: 12%;
     }
-    
+
     .f--heading {
 		font-size: 36px;
       	line-height: 42px;
-      
+
       	@media screen and (min-width: 750px) {
           font-size: 50px;
           line-height: 55px;
         }
-      
+
       	@media screen and (min-width: 1280px) {
           font-size: 60px;
           line-height: 65px;
         }
     }
-    
-    .f--accent {	
+
+    .f--accent {
       font-size: 14px;
       line-height: 20px;
       margin-top: 10px;
-      
+
       @media screen and (min-width: 750px) {
         font-size: 16px;
         line-height: 24px;
         margin-top: 15px;
       }
-      
+
       @media screen and (min-width: 1280px) {
         font-size: 20px;
         line-height: 30px;
@@ -6226,39 +6226,121 @@ Slideshow
 }
 
 .image-with-text--custom.image-with-text--custom--half {
-  	.f--heading {
-		font-size: 36px;
-      	line-height: 42px;
-      
-        @media screen and (min-width: 1280px) {
-          font-size: 46px;
-          line-height: 52px;
-        }
-    }
-    
-    .f--accent {	
-      font-size: 14px;
-      line-height: 20px;
-      margin-top: 10px;
-      
-      @media screen and (min-width: 750px) {
-        font-size: 16px;
-        line-height: 24px;
-        margin-top: 15px;
-      }
-      
+  .f--heading {
+      font-size: 36px;
+      line-height: 42px;
+
       @media screen and (min-width: 1280px) {
-        font-size: 16px;
-        line-height: 24px;
-        margin-top: 20px;
+        font-size: 46px;
+        line-height: 52px;
       }
+  }
+
+  .f--accent {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+
+    @media screen and (min-width: 750px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 15px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 20px;
     }
   }
+}
 
 .breadcrumbs {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  max-width: 1820px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 
   @media screen and (min-width: 990px) {
-    margin: 0 2.5rem 2em !important;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  li .icon {
+    width: 11px;
+    height: 11px;
+    margin: 0 4px 1px;
+  }
+
+  li:last-of-type .icon {
+    display: none;
+  }
+
+  a {
+    position: relative;
+    color: #000000;
+    text-decoration: none !important;
+    transition: 0.3s;
+    padding: 10px 0;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: #000000;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover{
+    color:#000000;
+  }
+
+  a:hover:before{
+    background-color: #000000;
+    visibility: visible;
+    width: 100%;
+  }
+
+  ol li:last-of-type {
+    pointer-events: none;
+  }
+
+  ol li:not(:last-of-type):after {
+    /*    content: "\f105";
+       font-family: 'FontAwesome';
+       display: inline-block;
+       padding-left: 5px;
+       padding-right: 5px;
+       speak: none;
+       font-size: 15px; */
+  }
+
+  [aria-current="page"] {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  [aria-current="page"]:hover,
+  [aria-current="page"]:focus {
+    text-decoration: underline;
+  }
 }
