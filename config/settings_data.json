@@ -111,10 +111,10 @@
           "1601576670121": {
             "type": "heading",
             "settings": {
-              "heading": "style that sustains",
+              "heading": "STIMULATING AWARENESS OF SUSTAINABLE FASHION AND THOUGHT",
               "heading_tag": "h1",
               "text_align": "text-align--center",
-              "font_size": "large",
+              "font_size": "default",
               "block_width_mobile": "full",
               "block_width": "full"
             }
@@ -218,7 +218,7 @@
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo_400px_wit.png",
-          "show_payment_icons": false,
+          "show_payment_icons": true,
           "color_combination": "tertiary"
         }
       },
@@ -226,27 +226,6 @@
         "type": "my_what_in_box",
         "settings": {
           "first_item": "left",
-          "color_scheme": "primary"
-        }
-      },
-      "1598371973255": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "title": "TIE-DYE TIME",
-          "collection": "pretty-fly-for-a-tie-dye",
-          "no_products": "4",
-          "subheading": "Custom dyed vegan shirts in your (future) favorite colors.",
-          "show_collection_link": true,
-          "color_scheme": "primary"
-        }
-      },
-      "1587988964249": {
-        "type": "richtext",
-        "disabled": true,
-        "settings": {
-          "title": "Title",
-          "cta_text": "",
           "color_scheme": "primary"
         }
       },
@@ -353,42 +332,6 @@
           "color_scheme": "secondary"
         }
       },
-      "1587064358726": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "title": "The Salient collection",
-          "collection": "",
-          "no_products": "4",
-          "subheading": "Ready for you to stand out. Defining Notice Fashion with vegan hoodies featuring conspicuous colors and patterns.",
-          "show_collection_link": true,
-          "color_scheme": "primary"
-        }
-      },
-      "1524638829494": {
-        "type": "map",
-        "disabled": true,
-        "settings": {
-          "title": "Visit our store",
-          "address": "<p>123 Fake St.<br\/>Toronto, Canada<\/p><p>Mon - Fri, 10am - 9pm<br\/>Saturday, 11am - 9pm<br\/>Sunday, 11am - 5pm<\/p>",
-          "map_address": "80 Spadina Ave, Toronto",
-          "button_text": "View on Google maps",
-          "api_key": "",
-          "color_scheme": "primary"
-        }
-      },
-      "1524639124620": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "title": "FACE MASKS",
-          "collection": "face-masks",
-          "no_products": "4",
-          "subheading": "Custom dyed double-layered organic face masks.",
-          "show_collection_link": true,
-          "color_scheme": "primary"
-        }
-      },
       "product": {
         "type": "product",
         "settings": {
@@ -407,10 +350,37 @@
       "list-collections-template": {
         "type": "list-collections-template",
         "blocks": {
+          "a074193c-4a0a-4969-9093-3783083988f3": {
+            "type": "collection",
+            "settings": {
+              "collection": "salient-hoodies",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
+          "d6067884-26d0-4acd-8b04-87f6b8ba0267": {
+            "type": "collection",
+            "settings": {
+              "collection": "salient-sweaters",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
+          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e": {
+            "type": "collection",
+            "settings": {
+              "collection": "pretty-fly-for-a-tie-dye",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
           "1588278606067": {
             "type": "collection",
             "settings": {
-              "collection": "",
+              "collection": "face-masks",
               "text_color": "primary",
               "show_collection_link": true,
               "cta_text": "Shop now"
@@ -418,19 +388,22 @@
           }
         },
         "block_order": [
+          "a074193c-4a0a-4969-9093-3783083988f3",
+          "d6067884-26d0-4acd-8b04-87f6b8ba0267",
+          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e",
           "1588278606067"
         ],
         "settings": {
           "show_cta": true,
-          "text_position": "over",
-          "overlay_color": "secondary",
+          "text_position": "under",
+          "overlay_color": "primary",
           "color_scheme": "secondary"
         }
       },
       "1524638428856": {
         "type": "newsletter",
         "settings": {
-          "title": "Sign up",
+          "title": "Sign up for free",
           "text": "<p>Do you want to be kept up to date about new items and apparel? Let&#x27;s make it happen. <\/p>",
           "color_scheme": "secondary"
         }
@@ -505,20 +478,6 @@
           "color_scheme": "primary"
         }
       },
-      "1524638498746": {
-        "type": "instagram",
-        "disabled": true,
-        "settings": {
-          "title": "Instagram",
-          "subheading": "Join the community. Show your style using #noticefashion",
-          "show_instagram_link": true,
-          "instagram_access_token": "17852345509.f9b60dd.bd28106ffe2d4785bca67856cabe6a64",
-          "no_posts": "4",
-          "show_caption": false,
-          "crop_as_square": false,
-          "color_scheme": "primary"
-        }
-      },
       "collection-template": {
         "type": "collection-template",
         "settings": {
@@ -530,103 +489,14 @@
           "enable_sort_filter": false
         }
       },
-      "1524638071060": {
-        "type": "cascade",
-        "disabled": true,
-        "blocks": {
-          "1524638071060-1": {
-            "type": "image",
-            "settings": {
-              "block_width_mobile": "half",
-              "block_width": "half"
-            }
-          },
-          "1524638071060-2": {
-            "type": "image",
-            "settings": {
-              "block_width_mobile": "half",
-              "block_width": "half"
-            }
-          },
-          "1524638071060-3": {
-            "type": "rich_text",
-            "settings": {
-              "heading": "",
-              "heading_tag": "h2",
-              "rich_text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-              "cta_text": "Shop now",
-              "text_align": "text-align--left",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          },
-          "1524646981742": {
-            "type": "product_feature",
-            "settings": {
-              "product": "",
-              "enable_payment_button": true,
-              "show_quantity": true
-            }
-          },
-          "1525403822637": {
-            "type": "heading",
-            "settings": {
-              "heading": "Heading or impact text goes here.",
-              "heading_tag": "h2",
-              "text_align": "text-align--left",
-              "font_size": "large",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          }
-        },
-        "block_order": [
-          "1524638071060-1",
-          "1524638071060-2",
-          "1524638071060-3",
-          "1524646981742",
-          "1525403822637"
-        ],
-        "settings": {
-          "first_item": "left",
-          "color_scheme": "tertiary"
-        }
-      },
-      "1524647205456": {
-        "type": "slideshow",
-        "disabled": true,
-        "blocks": {
-          "1524647205456-1": {
-            "type": "slide",
-            "settings": {
-              "heading": "About the Brand",
-              "text": "",
-              "cta_url": "shopify:\/\/pages\/about",
-              "cta_text": "Read more",
-              "content_position": "text-align--left align--middle",
-              "text_align": "text-align--left",
-              "color_overlay": "primary"
-            }
-          }
-        },
-        "block_order": [
-          "1524647205456-1"
-        ],
-        "settings": {
-          "auto_rotate": true,
-          "slide_speed": "5000",
-          "full_width": false,
-          "color_scheme": "primary"
-        }
-      },
       "header": {
         "type": "header",
         "blocks": {
           "1571871673435": {
             "type": "banner",
             "settings": {
-              "image": "shopify:\/\/shop_images\/new4.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/hero_new_mitch_eyes_mobile.jpg",
+              "image": "shopify:\/\/shop_images\/NEW-HERO-SALIENT_b5b38830-70c5-4dde-ad4e-77c278517fd4.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/NEW-HERO-SALIENT_MOBILE_73c92955-81db-4933-b896-f5ddd81447c0.jpg",
               "image_style": "fit_content",
               "overlay_text_color": "white",
               "logo_alternate": "shopify:\/\/shop_images\/logo_400px_wit.png"
@@ -649,7 +519,7 @@
           "show_search_sidebar": true,
           "show_announcement": true,
           "home_page_only": true,
-          "text": "STAY INSIDE, STAY SAFE",
+          "text": "FREE SHIPPING ON ALL DUTCH ORDERS",
           "announcement_color": "tertiary"
         }
       },
@@ -745,17 +615,9 @@
     },
     "content_for_index": [
       "1525403578042",
-      "1598371973255",
-      "1524639124620",
       "1524638428856",
       "1587988908855",
-      "1587064358726",
-      "1524637029643",
-      "1524638498746",
-      "1524647205456",
-      "1524638071060",
-      "1524638829494",
-      "1587988964249"
+      "1524637029643"
     ]
   },
   "presets": {
