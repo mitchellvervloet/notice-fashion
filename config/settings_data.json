@@ -108,6 +108,17 @@
       "1525403578042": {
         "type": "cascade",
         "blocks": {
+          "1601576670121": {
+            "type": "heading",
+            "settings": {
+              "heading": "STIMULATING AWARENESS OF SUSTAINABLE FASHION AND THOUGHT",
+              "heading_tag": "h1",
+              "text_align": "text-align--center",
+              "font_size": "default",
+              "block_width_mobile": "full",
+              "block_width": "full"
+            }
+          },
           "3c0250b3-19e1-433a-92da-1f0612e67766": {
             "type": "image_text_overlay_cstm",
             "settings": {
@@ -120,17 +131,6 @@
               "section_color": "white",
               "block_width_mobile": "full",
               "block_width": "half"
-            }
-          },
-          "1601576670121": {
-            "type": "heading",
-            "settings": {
-              "heading": "STIMULATING AWARENESS OF SUSTAINABLE FASHION AND THOUGHT",
-              "heading_tag": "h1",
-              "text_align": "text-align--center",
-              "font_size": "default",
-              "block_width_mobile": "full",
-              "block_width": "full"
             }
           },
           "1610396185400": {
@@ -188,82 +188,6 @@
           "color_scheme": "primary"
         }
       },
-      "product": {
-        "type": "product",
-        "settings": {
-          "color_scheme": "primary",
-          "enable_payment_button": true,
-          "show_quantity": false,
-          "show_vendor": true,
-          "hide_drop_down_labels": false,
-          "show_share_buttons": true,
-          "enable_image_zoom": true,
-          "enable_split_description": true,
-          "description_color_scheme": "primary",
-          "description_under_add_to_cart": true
-        }
-      },
-      "list-collections-template": {
-        "type": "list-collections-template",
-        "blocks": {
-          "a074193c-4a0a-4969-9093-3783083988f3": {
-            "type": "collection",
-            "settings": {
-              "collection": "salient-hoodies",
-              "text_color": "primary",
-              "show_collection_link": true,
-              "cta_text": "Shop now"
-            }
-          },
-          "1588278606067": {
-            "type": "collection",
-            "settings": {
-              "collection": "face-masks",
-              "text_color": "primary",
-              "show_collection_link": true,
-              "cta_text": "Shop now"
-            }
-          },
-          "d6067884-26d0-4acd-8b04-87f6b8ba0267": {
-            "type": "collection",
-            "settings": {
-              "collection": "salient-sweaters",
-              "text_color": "primary",
-              "show_collection_link": true,
-              "cta_text": "Shop now"
-            }
-          },
-          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e": {
-            "type": "collection",
-            "settings": {
-              "collection": "pretty-fly-for-a-tie-dye",
-              "text_color": "primary",
-              "show_collection_link": true,
-              "cta_text": "Shop now"
-            }
-          }
-        },
-        "block_order": [
-          "a074193c-4a0a-4969-9093-3783083988f3",
-          "d6067884-26d0-4acd-8b04-87f6b8ba0267",
-          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e",
-          "1588278606067"
-        ],
-        "settings": {
-          "show_cta": true,
-          "text_position": "under",
-          "overlay_color": "primary",
-          "color_scheme": "secondary"
-        }
-      },
-      "1524638428856": {
-        "type": "newsletter",
-        "settings": {
-          "title": "Sign up for free",
-          "text": "<p>Do you want to be kept up to date about new items and apparel? Let&#x27;s make it happen. <\/p>",
-          "color_scheme": "secondary"
-        }
-      },
       "footer": {
         "type": "footer",
         "blocks": {
@@ -305,92 +229,11 @@
           "color_scheme": "primary"
         }
       },
-      "1524637029643": {
-        "type": "cascade",
-        "blocks": {
-          "1524637029643-2": {
-            "type": "rich_text",
-            "settings": {
-              "heading": "Sustainable",
-              "heading_tag": "h2",
-              "rich_text": "<p>We want you to Notice the world and its importance. Notice Fashion focusses on providing sustainable fashion to you. Be smart with what you wear. All Notice Fashion is eco consciously selected and produced. <\/p>",
-              "cta_url": "shopify:\/\/pages\/sustainability",
-              "cta_text": "Read more",
-              "text_align": "text-align--left",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          },
-          "1524637029643-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Sustainability.jpg",
-              "url": "shopify:\/\/pages\/sustainability",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          }
-        },
-        "block_order": [
-          "1524637029643-1",
-          "1524637029643-2"
-        ],
-        "settings": {
-          "first_item": "left",
-          "color_scheme": "primary"
-        }
-      },
-      "1587988908855": {
-        "type": "cascade",
-        "blocks": {
-          "1589995044850": {
-            "type": "rich_text",
-            "settings": {
-              "heading": "STREETSTYLE INSPIRED",
-              "heading_tag": "h2",
-              "rich_text": "<p>Street and urban styled fashion. Dress yourself in color while enjoying the comfort of soft and sustainable clothing. <\/p>",
-              "cta_url": "shopify:\/\/collections",
-              "cta_text": "Shop now",
-              "text_align": "text-align--left",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          },
-          "1589995020937": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Streetstyle-Inspired.jpg",
-              "url": "shopify:\/\/collections",
-              "block_width_mobile": "full",
-              "block_width": "half"
-            }
-          }
-        },
-        "block_order": [
-          "1589995020937",
-          "1589995044850"
-        ],
-        "settings": {
-          "first_item": "left",
-          "color_scheme": "primary"
-        }
-      },
       "my_product_elements": {
         "type": "my_product_elements",
         "settings": {
           "first_item": "left",
           "color_scheme": "primary"
-        }
-      },
-      "collection-template": {
-        "type": "collection-template",
-        "settings": {
-          "color_scheme": "primary",
-          "no_posts": 12,
-          "show_collection_image": false,
-          "enable_tag_filter": false,
-          "capitalize_tags": true,
-          "enable_sort_filter": false
         }
       },
       "password": {
@@ -483,6 +326,169 @@
           "show_link": true
         }
       },
+      "page-template": {
+        "type": "page-template",
+        "settings": {
+          "color_scheme": "secondary"
+        }
+      },
+      "product": {
+        "type": "product",
+        "settings": {
+          "color_scheme": "primary",
+          "enable_payment_button": true,
+          "show_quantity": false,
+          "show_vendor": true,
+          "hide_drop_down_labels": false,
+          "show_share_buttons": true,
+          "enable_image_zoom": true,
+          "enable_split_description": true,
+          "description_color_scheme": "primary",
+          "description_under_add_to_cart": true
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "a074193c-4a0a-4969-9093-3783083988f3": {
+            "type": "collection",
+            "settings": {
+              "collection": "salient-hoodies",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
+          "d6067884-26d0-4acd-8b04-87f6b8ba0267": {
+            "type": "collection",
+            "settings": {
+              "collection": "salient-sweaters",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
+          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e": {
+            "type": "collection",
+            "settings": {
+              "collection": "pretty-fly-for-a-tie-dye",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          },
+          "1588278606067": {
+            "type": "collection",
+            "settings": {
+              "collection": "face-masks",
+              "text_color": "primary",
+              "show_collection_link": true,
+              "cta_text": "Shop now"
+            }
+          }
+        },
+        "block_order": [
+          "a074193c-4a0a-4969-9093-3783083988f3",
+          "d6067884-26d0-4acd-8b04-87f6b8ba0267",
+          "2d2a3563-7ea0-4377-ab3b-085f90db9f7e",
+          "1588278606067"
+        ],
+        "settings": {
+          "show_cta": true,
+          "text_position": "under",
+          "overlay_color": "primary",
+          "color_scheme": "secondary"
+        }
+      },
+      "1524638428856": {
+        "type": "newsletter",
+        "settings": {
+          "title": "Sign up for free",
+          "text": "<p>Do you want to be kept up to date about new items and apparel? Let&#x27;s make it happen. <\/p>",
+          "color_scheme": "secondary"
+        }
+      },
+      "1524637029643": {
+        "type": "cascade",
+        "blocks": {
+          "1524637029643-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Sustainability.jpg",
+              "url": "shopify:\/\/pages\/sustainability",
+              "block_width_mobile": "full",
+              "block_width": "half"
+            }
+          },
+          "1524637029643-2": {
+            "type": "rich_text",
+            "settings": {
+              "heading": "Sustainable",
+              "heading_tag": "h2",
+              "rich_text": "<p>We want you to Notice the world and its importance. Notice Fashion focusses on providing sustainable fashion to you. Be smart with what you wear. All Notice Fashion is eco consciously selected and produced. <\/p>",
+              "cta_url": "shopify:\/\/pages\/sustainability",
+              "cta_text": "Read more",
+              "text_align": "text-align--left",
+              "block_width_mobile": "full",
+              "block_width": "half"
+            }
+          }
+        },
+        "block_order": [
+          "1524637029643-1",
+          "1524637029643-2"
+        ],
+        "settings": {
+          "first_item": "left",
+          "color_scheme": "primary"
+        }
+      },
+      "1587988908855": {
+        "type": "cascade",
+        "blocks": {
+          "1589995020937": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Streetstyle-Inspired.jpg",
+              "url": "shopify:\/\/collections",
+              "block_width_mobile": "full",
+              "block_width": "half"
+            }
+          },
+          "1589995044850": {
+            "type": "rich_text",
+            "settings": {
+              "heading": "STREETSTYLE INSPIRED",
+              "heading_tag": "h2",
+              "rich_text": "<p>Street and urban styled fashion. Dress yourself in color while enjoying the comfort of soft and sustainable clothing. <\/p>",
+              "cta_url": "shopify:\/\/collections",
+              "cta_text": "Shop now",
+              "text_align": "text-align--left",
+              "block_width_mobile": "full",
+              "block_width": "half"
+            }
+          }
+        },
+        "block_order": [
+          "1589995020937",
+          "1589995044850"
+        ],
+        "settings": {
+          "first_item": "left",
+          "color_scheme": "primary"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "color_scheme": "primary",
+          "no_posts": 12,
+          "show_collection_image": false,
+          "enable_tag_filter": false,
+          "capitalize_tags": true,
+          "enable_sort_filter": false
+        }
+      },
       "header": {
         "type": "header",
         "blocks": {
@@ -515,12 +521,6 @@
           "home_page_only": true,
           "text": "FREE SHIPPING ON ALL DUTCH ORDERS",
           "announcement_color": "tertiary"
-        }
-      },
-      "page-template": {
-        "type": "page-template",
-        "settings": {
-          "color_scheme": "secondary"
         }
       },
       "product-recommendations": {
