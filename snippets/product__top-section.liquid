@@ -81,7 +81,7 @@
           {%- if feature_product -%}
           <a class="color--{{ section_color }}-text" href="{{ product.url }}"><h2 class="{{ global__heading_font_size }} m0 mb1">{{ product.title }}</h2></a>
           {%- else -%}
-          <h1 class="f--heading f--heading font-size--l line-height--4 wd--font-size--xxl wd--line-height--6 m0 mb1 lg--up--mb2 {% unless section.settings.show_vendor and product.vendor != blank %}mb1{% endunless %}">{{ product.title }}</h1>
+          <h1 class="f--heading f--heading font-size--l line-height--4 wd--font-size--xxl m0 {% unless section.settings.show_vendor and product.vendor != blank %}mb1{% endunless %}">{{ product.title }}</h1>
           {%- endif -%}
 
           <!-- {% if section.settings.show_vendor and product.vendor != blank %}
