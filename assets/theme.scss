@@ -347,7 +347,7 @@ $z-index-dropdown: 2;
 $z-index-skip-to-content: 10000; // really high to be safe of app markup
 
 /*================ SVG ================*/
-$svg-select-icon: #{'//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select.svg?v=4521280492989759865'};
+$svg-select-icon: #{'//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select.svg?v=4521280492989759865'};
 
 
 
@@ -4015,7 +4015,7 @@ $pswp__include-minimal-style: true !default;
 Responsive Images
 ========================================================================== */
 
- 
+
 .responsive-image__wrapper {
   position: relative;
   overflow: hidden;
@@ -4117,7 +4117,7 @@ Mobile Flickity
 
 Sections
 ========================================================================== */
-//stylelint-disable 
+//stylelint-disable
 body:not(.banner-image) {
   .shopify-section:first-child section.bg--primary-background {
     padding-top: $space-2;
@@ -4235,7 +4235,7 @@ Pagination
   opacity: 1; }
   .pswp__preloader--active .pswp__preloader__icn {
     /* We use .gif in browsers that don't support CSS animation */
-    background: url(//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/pswp-preloader.gif?v=7700873655460149608) 0 0 no-repeat; }
+    background: url(//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/pswp-preloader.gif?v=7700873655460149608) 0 0 no-repeat; }
 
 .pswp--css_animation .pswp__preloader--active {
   opacity: 1; }
@@ -4777,30 +4777,30 @@ select {
   background-size: 18px 18px;
 
   background: {
-    image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select.svg?v=4521280492989759865');
+    image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select.svg?v=4521280492989759865');
     repeat: no-repeat;
     position: right 10px center;
   }
 }
 
 select.color--primary-text {
-  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select__primary.svg?v=4521280492989759865');
+  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select__primary.svg?v=4521280492989759865');
 }
 
 select.color--secondary-text {
-  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select__secondary.svg?v=3235761528917016009');
+  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select__secondary.svg?v=3235761528917016009');
 }
 
 select.color--tertiary-text {
-  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select__tertiary.svg?v=3235761528917016009');
+  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select__tertiary.svg?v=3235761528917016009');
 }
 
 select.color--white-text {
-  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select__white.svg?v=7258053322257224675');
+  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select__white.svg?v=7258053322257224675');
 }
 
 select.color--black-text {
-  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/36/assets/ico-select__black.svg?v=6717314898104177615');
+  background-image: url('//cdn.shopify.com/s/files/1/0292/1519/5229/t/51/assets/ico-select__black.svg?v=6717314898104177615');
 }
 
 
@@ -5448,13 +5448,13 @@ Header
 
 #BannerDesktopWrapper:after {
   content: '';
-  display: none; 
+  display: none;
 }
 
 @include media-query($large-up) {
   #BannerDesktopWrapper:after {
     content: 'watch';
-    display: none; 
+    display: none;
   }
 }
 
@@ -5920,7 +5920,7 @@ Slideshow
 }
 
 @include media-query($small) {
-  .social-widget .sw-instagram .sw-instagram-header-title { 
+  .social-widget .sw-instagram .sw-instagram-header-title {
     font-size: 2.25rem;
     line-height: 2.5rem;
     padding: 0 0 2rem 1.25rem;
@@ -5962,7 +5962,7 @@ Slideshow
   .product-description__form {
   	padding-right: 0;
   }
-  
+
   .product-description__description {
   	padding-right: 0;
   }
@@ -6029,7 +6029,7 @@ Slideshow
 
 .item.item--image-with-text-custom.item--desktop--full {
 	padding-bottom: 60px;
-  
+
   	@media screen and (min-width: 990px) {
         padding-bottom: 80px;
     }
@@ -6060,38 +6060,38 @@ Slideshow
     justify-content: center;
     text-align: center;
     position: relative;
-    
+
     > div {
     	position: relative;
       	bottom: 12%;
     }
-    
+
     .f--heading {
 		font-size: 36px;
       	line-height: 42px;
-      
+
       	@media screen and (min-width: 750px) {
           font-size: 50px;
           line-height: 55px;
         }
-      
+
       	@media screen and (min-width: 1280px) {
           font-size: 60px;
           line-height: 65px;
         }
     }
-    
-    .f--accent {	
+
+    .f--accent {
       font-size: 14px;
       line-height: 20px;
       margin-top: 10px;
-      
+
       @media screen and (min-width: 750px) {
         font-size: 16px;
         line-height: 24px;
         margin-top: 15px;
       }
-      
+
       @media screen and (min-width: 1280px) {
         font-size: 20px;
         line-height: 30px;
@@ -6137,12 +6137,13 @@ Slideshow
   color: #000000;
   margin: 0;
   max-width: 1820px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 
   @media screen and (min-width: 990px) {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+    margin: 0 auto;
   }
 
   ol {
