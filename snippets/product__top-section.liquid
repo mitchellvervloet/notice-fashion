@@ -6,7 +6,7 @@
         {% assign product_thumbnail_grid = 'md--up--one-sixth' %}
         {% if product.images.size > 1 and feature_product == false %}
           <div class="product__thumbnails relative overflow--hidden {{ product_thumbnail_grid }} md--up--pr2 md--up--absolute md--up--full--h  js"  data-mobile-flickity  data-product-thumbnails>
-            <div class="product-flickity__slides pb2 md--up--mtn2 md--up--flex md--up--flex--column">
+            <div class="product-flickity__slides pb3 md--up--mtn2 md--up--flex md--up--flex--column">
               {%- for image in product.images -%}
 
                 {%- assign active_class = '' -%}
@@ -76,19 +76,19 @@
 
     <div class="grid__item md--up--one-half{% if current_variant.unit_price_measurement %} has-unit-price{% endif %} product-description-container" data-product-description-container>
       <div class="{% unless description_under_add_to_cart %}wd--pt3 lg--up--pl3 wd--pl4 {% endunless %} ">
-        <div class="px2 mt1 lg--up--mt3 md--up--pt0 lg--up--px3 product-description__form">
+        <div class="px2 mt3 md--up--pt0 lg--up--px3 product-description__form">
 
           {%- if feature_product -%}
           <a class="color--{{ section_color }}-text" href="{{ product.url }}"><h2 class="{{ global__heading_font_size }} m0 mb1">{{ product.title }}</h2></a>
           {%- else -%}
-          <h1 class="f--heading f--heading font-size--l line-height--4 wd--font-size--xxl m0 {% unless section.settings.show_vendor and product.vendor != blank %}mb1{% endunless %}">{{ product.title }}</h1>
+          <h1 class="f--heading {{ global__heading_font_size }} m0 {% unless section.settings.show_vendor and product.vendor != blank %}mb1{% endunless %}">{{ product.title }}</h1>
           {%- endif -%}
 
-          <!-- {% if section.settings.show_vendor and product.vendor != blank %}
+          {% if section.settings.show_vendor and product.vendor != blank %}
           <p class="f--body font-size--ml m0 mb1">{{ product.vendor }}</p>
-          {% endif %} -->
+          {% endif %}
 
-          <div class="font-size--m" data-price-wrapper>
+          <div class="font-size--ml" data-price-wrapper>
             <span {% if product.compare_at_price_max > product.price %}class="color--{{ section_color }}-accent"{% endif %} data-product-price>
               {{ current_variant.price | money }}
             </span>
@@ -132,12 +132,9 @@
 
             <div id="AddToCartForm--{{ section_id }}" class="form-vertical">
             {% form 'product', product %}
-
-              <div class="form-align-button-selector">
-
-                {% unless product.has_only_default_variant %}
+              {% unless product.has_only_default_variant %}
                 {% for option in product.options_with_values %}
-                  <div class="selector-wrapper js mt1 lg--up--mt2 font-size--m">
+                  <div class="selector-wrapper js mt2 font-size--m">
                     {% unless hide_drop_down_labels %}
                     <label class="block" for="SingleOptionSelector-{{ forloop.index0 }}">
                       {{ option.name }}
@@ -171,42 +168,37 @@
                 {% endfor %}
               </select>
 
-                {% if show_quantity %}
-                <div class="mt2 font-size--m flex items--center">
-                  <div class="pr2">
-                    <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-                  </div>
-                  <div class="flex--1 js-qty-wrapper color--{{ section_color }}-text">
-                    <input class="bg--transparent border--{{ section_color }}-text p1 font-size--sm mt1" type="number" id="Quantity" name="quantity" value="1" min="1">
-                  </div>
+              {% if show_quantity %}
+              <div class="mt2 font-size--m flex items--center">
+                <div class="pr2">
+                  <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
                 </div>
-                {% endif %}
-
-                <div class="add-to-cart-container--edited mt1 {% unless current_variant.available %}hide-pay-buttons{% endunless %}  {% if enable_payment_button %}cta-content--pay-buttons{% endif %}" data-add-to-cart-container>
-                  <button
-                    class="btn border--none btn--add-to-cart p1 full--w block"
-                    type="submit"
-                    name="add"
-                    id="AddToCart--{{ section_id }}"
-                    data-add-to-cart
-                    {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-                      <span data-add-to-cart-text>
-                        {% if current_variant.available %}
-                          {{ 'products.product.add_to_cart' | t }}
-                        {% else %}
-                          {{ 'products.product.sold_out' | t }}
-                        {% endif %}
-                      </span>
-                  </button>
+                <div class="flex--1 js-qty-wrapper color--{{ section_color }}-text">
+                  <input class="bg--transparent border--{{ section_color }}-text p1 font-size--sm mt1" type="number" id="Quantity" name="quantity" value="1" min="1">
                 </div>
-
               </div>
-
-              {% if enable_payment_button %}
-                <div class="add-to-cart-container mt1 {% unless current_variant.available %}hide-pay-buttons{% endunless %}  {% if enable_payment_button %}cta-content--pay-buttons{% endif %}" data-add-to-cart-container>
-                  <div class="mt2 payment-button-wrapper color--{{ section_color }}">{{ form | payment_button }}</div>
-                </div>
               {% endif %}
+
+              <div class="add-to-cart-container mt3 {% unless current_variant.available %}hide-pay-buttons{% endunless %}  {% if enable_payment_button %}cta-content--pay-buttons{% endif %}" data-add-to-cart-container>
+                <button
+                  class="btn border--none btn--add-to-cart color-scheme--{{ section_color }} {% if enable_payment_button %}bg--transparent color--{{ section_color }}-text border--{{ section_color }}-text hv--{{ section_color }}-accent hv--border--{{ section_color }}-accent {% else %}border--none bg--{{ section_color }}-text color--{{ section_color }}-text--overlay {{ global__hover_bg }}{% endif %} p1 full--w block"
+                  type="submit"
+                  name="add"
+                  id="AddToCart--{{ section_id }}"
+                  data-add-to-cart
+                  {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+                    <span data-add-to-cart-text>
+                      {% if current_variant.available %}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {% else %}
+                        {{ 'products.product.sold_out' | t }}
+                      {% endif %}
+                    </span>
+                </button>
+                {% if enable_payment_button %}
+                  <div class="mt2 payment-button-wrapper color--{{ section_color }}">{{ form | payment_button }}</div>
+                {% endif %}
+              </div>
 
             {% endform %}
             </div>
@@ -215,7 +207,7 @@
         <div class="px2 md--up--pt0 lg--up--px3 product-description__description">
           {% if description_under_add_to_cart %}
             {% if product.description != empty or product.description != '' %}
-              <div class="mt2 lg--up--mt3 rte {{ global__basic_font_size }}" data-product-description>
+              <div class="mt3 rte {{ global__basic_font_size }}" data-product-description>
                 {{ product.description }}
                 <div data-app="eastsideco_sizeGuides"
      data-shop="{{ shop.permanent_domain }}"
