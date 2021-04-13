@@ -5881,9 +5881,44 @@ Product
 }
 
 .btn--add-to-cart {
-  &[disabled],
-  &.disabled {
-    @include opacity(0.3);
+  background: $color-primary-accent;
+      border: 1px solid $color-primary-accent;
+      color: $color-primary-text;
+      height: 45px;
+
+      &[disabled],
+      &.disabled {
+        @include opacity(0.3);
+      }
+
+      &:hover, &:focus {
+        color:;
+        background-color: darken($color-primary-accent, 8%);
+        border-color: darken($color-primary-accent, 8%);
+      }
+  }
+
+  .form-align-button-selector {
+    @media screen and (max-width: 749px) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .selector-wrapper {
+      @media screen and (max-width: 749px) {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 90px;
+        margin-right: 1.25rem;
+      }
+    }
+
+    .add-to-cart-container--edited {
+      @media screen and (max-width: 749px) {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
   }
 }
 
